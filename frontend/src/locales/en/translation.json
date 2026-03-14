@@ -1,7 +1,8 @@
 {
   "navbar": {
     "login": "Login",
-    "register": "Register"
+    "register": "Register",
+    "logout": "Logout"
   },
   "landing": {
     "badge": "Social platform for book lovers",

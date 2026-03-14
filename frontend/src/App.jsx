@@ -8,25 +8,28 @@ import BookDetail from "./pages/BookDetail";
 import Search from "./pages/Search";
 import Settings from "./pages/Settings";
 import MainLayout from "./components/layout/MainLayout";
+import { AuthProvider } from "./context/AuthContext";
 
 function App() {
   return (
-    <BrowserRouter>
-      <MainLayout>
-        <Routes>
-          {/* Public Pages */}
-          <Route path="/" element={<Landing />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          {/* Private Pages */}
-          <Route path="/feed" element={<Feed />} />
-          <Route path="/profile/:username" element={<Profile />} />
-          <Route path="/book/:id" element={<BookDetail />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="/settings" element={<Settings />} />
-        </Routes>
-      </MainLayout>
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <MainLayout>
+          <Routes>
+            {/* Public Pages */}
+            <Route path="/" element={<Landing />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            {/* Private Pages */}
+            <Route path="/feed" element={<Feed />} />
+            <Route path="/profile/:username" element={<Profile />} />
+            <Route path="/book/:id" element={<BookDetail />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/settings" element={<Settings />} />
+          </Routes>
+        </MainLayout>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 

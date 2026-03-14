@@ -1,7 +1,8 @@
 {
   "navbar": {
     "login": "Giriş Yap",
-    "register": "Kayıt Ol"
+    "register": "Kayıt Ol",
+    "logout": "Çıkış Yap"
   },
   "landing": {
     "badge": "Kitap severler için sosyal platform",
