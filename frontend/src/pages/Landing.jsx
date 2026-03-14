@@ -13,7 +13,7 @@ function Landing() {
           {t("landing.badge")}
         </span>
         <h1 className="text-5xl font-bold leading-tight mb-5">
-          {t("landing.title")}{" "}
+          {t("landing.title")}
           <span className="text-blue-600">{t("landing.titleHighlight")}</span>
         </h1>
         <p className="text-gray-500 text-lg mb-8 leading-relaxed">
@@ -104,7 +104,7 @@ function Landing() {
       </section>
 
       {/* CTA SECTION */}
-      <section className="bg-gray-50 border-t border-gray-200 py-20 px-4 text-center">
+      <section className="border-t border-gray-200 py-20 px-4 text-center">
         <h2 className="text-3xl font-bold mb-3">{t("landing.cta.title")}</h2>
         <p className="text-gray-500 mb-8">{t("landing.cta.subtitle")}</p>
         <Link
