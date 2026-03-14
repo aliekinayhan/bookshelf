@@ -9,6 +9,31 @@
     "titleHighlight": "yeni kitaplar keşfet",
     "subtitle": "Alıntılarını paylaş, incelemeler yaz, okurlarla bağlan.",
     "startButton": "Ücretsiz Başla",
-    "loginButton": "Giriş Yap"
+    "loginButton": "Giriş Yap",
+    "stats": {
+      "readers": "Okur",
+      "books": "Kitap",
+      "quotes": "Alıntı"
+    },
+    "features": {
+      "title": "Neler yapabilirsin?",
+      "books": {
+        "title": "Kitap Takibi",
+        "desc": "Okuduklarını, okumak istediklerini listele. Open Library'den milyonlarca kitap."
+      },
+      "quotes": {
+        "title": "Alıntı & İnceleme",
+        "desc": "Etkilendiğin alıntıları paylaş, detaylı incelemeler yaz, toplulukla tartış."
+      },
+      "social": {
+        "title": "Sosyal Feed",
+        "desc": "Takip ettiğin okurların paylaşımlarını gerçek zamanlı olarak gör, beğen, yorum yap."
+      }
+    },
+    "cta": {
+      "title": "Okuma serüvenine başla",
+      "subtitle": "Ücretsiz hesap oluştur, topluluğa katıl.",
+      "button": "Hemen Katıl"
+    }
   }
 }

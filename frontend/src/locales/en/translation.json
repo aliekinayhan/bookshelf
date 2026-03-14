@@ -9,6 +9,31 @@
     "titleHighlight": "discover new books",
     "subtitle": "Share quotes, write reviews, connect with readers.",
     "startButton": "Get Started",
-    "loginButton": "Login"
+    "loginButton": "Login",
+    "stats": {
+      "readers": "Readers",
+      "books": "Books",
+      "quotes": "Quotes"
+    },
+    "features": {
+      "title": "What can you do?",
+      "books": {
+        "title": "Book Tracking",
+        "desc": "List what you've read and want to read. Millions of books from Open Library."
+      },
+      "quotes": {
+        "title": "Quotes & Reviews",
+        "desc": "Share quotes that moved you, write detailed reviews, discuss with the community."
+      },
+      "social": {
+        "title": "Social Feed",
+        "desc": "See, like, and comment on posts from readers you follow in real time."
+      }
+    },
+    "cta": {
+      "title": "Start your reading journey",
+      "subtitle": "Create a free account and join the community.",
+      "button": "Join Now"
+    }
   }
 }
