@@ -43,3 +43,7 @@
 - [ ] Bağlantıyı AuthContext'te aç/kapat
 - [ ] Like/Comment anlık güncelleme
 - [ ] Bildirim sistemi
+
+- [ ] Kitaba tıklayınca kitap detay sayfasına git
+- [ ] Okuma ilerlemesi güncelleme (kitap üzerine gelince buton)
+- [ ] Post detay sayfası (/post/:id) — yorumlar burada
