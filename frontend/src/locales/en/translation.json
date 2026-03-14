@@ -48,5 +48,19 @@
     "button": "Sign In",
     "noAccount": "Don't have an account?",
     "registerLink": "Sign up"
+  },
+  "register": {
+    "title": "Create an account",
+    "subtitle": "Join the community, start reading",
+    "or": "or",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "passwordConfirm": "Confirm password",
+    "button": "Sign Up",
+    "hasAccount": "Already have an account?",
+    "loginLink": "Sign in"
   }
 }

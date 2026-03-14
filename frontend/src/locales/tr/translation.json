@@ -48,5 +48,19 @@
     "button": "Giriş Yap",
     "noAccount": "Hesabın yok mu?",
     "registerLink": "Kayıt ol"
+  },
+  "register": {
+    "title": "Hesap oluştur",
+    "subtitle": "Topluluğa katıl, okumaya başla",
+    "or": "ya da",
+    "firstName": "Ad",
+    "lastName": "Soyad",
+    "username": "Kullanıcı adı",
+    "email": "E-posta",
+    "password": "Şifre",
+    "passwordConfirm": "Şifre tekrar",
+    "button": "Kayıt Ol",
+    "hasAccount": "Zaten hesabın var mı?",
+    "loginLink": "Giriş yap"
   }
 }

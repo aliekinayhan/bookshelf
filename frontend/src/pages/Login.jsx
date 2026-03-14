@@ -30,8 +30,8 @@ function Login() {
         </div>
 
         {/* OAuth2 Buttons */}
-        {/* OAuth2 Butonları — 2x2 grid */}
         <div className="grid grid-cols-2 gap-3 mb-6">
+          {/* Google */}
           <button
             onClick={() => handleOAuthLogin("google")}
             className="flex items-center justify-center gap-2 border border-gray-200 rounded-lg py-2.5 text-sm font-medium hover:bg-gray-50"
@@ -39,7 +39,7 @@ function Login() {
             <FcGoogle size={18} />
             Google
           </button>
-
+          {/* Facebook */}
           <button
             onClick={() => handleOAuthLogin("facebook")}
             className="flex items-center justify-center gap-2 border border-gray-200 rounded-lg py-2.5 text-sm font-medium hover:bg-gray-50"
@@ -47,7 +47,7 @@ function Login() {
             <FaFacebook size={18} className="text-blue-600" />
             Facebook
           </button>
-
+          {/* Twitter */}
           <button
             onClick={() => handleOAuthLogin("twitter")}
             className="flex items-center justify-center gap-2 border border-gray-200 rounded-lg py-2.5 text-sm font-medium hover:bg-gray-50"
@@ -55,7 +55,7 @@ function Login() {
             <FaXTwitter size={18} />
             Twitter / X
           </button>
-
+          {/* Github */}
           <button
             onClick={() => handleOAuthLogin("github")}
             className="flex items-center justify-center gap-2 border border-gray-200 rounded-lg py-2.5 text-sm font-medium hover:bg-gray-50"
@@ -65,7 +65,7 @@ function Login() {
           </button>
         </div>
 
-        {/* Seperator */}
+        {/* Separator */}
         <div className="flex items-center gap-3 mb-6">
           <div className="flex-1 h-px bg-gray-200"></div>
           <span className="text-xs text-gray-400">{t("login.or")}</span>
