@@ -31,14 +31,14 @@ function Navbar() {
 
           <Link
             to="/login"
-            className="text-gray-600 hover:text-blue-600 font-medium"
+            className="w-24 text-center text-gray-600 hover:text-blue-600 font-medium"
           >
             {t("navbar.login")}
           </Link>
 
           <Link
             to="/register"
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 font-medium"
+            className="w-28 text-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 font-medium"
           >
             {t("navbar.register")}
           </Link>
