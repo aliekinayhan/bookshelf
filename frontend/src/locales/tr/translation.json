@@ -1,0 +1,14 @@
+{
+  "navbar": {
+    "login": "Giriş Yap",
+    "register": "Kayıt Ol"
+  },
+  "landing": {
+    "badge": "Kitap severler için sosyal platform",
+    "title": "Okuduklarını paylaş,",
+    "titleHighlight": "yeni kitaplar keşfet",
+    "subtitle": "Alıntılarını paylaş, incelemeler yaz, okurlarla bağlan.",
+    "startButton": "Ücretsiz Başla",
+    "loginButton": "Giriş Yap"
+  }
+}

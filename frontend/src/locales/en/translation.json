@@ -1,0 +1,14 @@
+{
+  "navbar": {
+    "login": "Login",
+    "register": "Register"
+  },
+  "landing": {
+    "badge": "Social platform for book lovers",
+    "title": "Share what you read,",
+    "titleHighlight": "discover new books",
+    "subtitle": "Share quotes, write reviews, connect with readers.",
+    "startButton": "Get Started",
+    "loginButton": "Login"
+  }
+}
