@@ -35,5 +35,18 @@
       "subtitle": "Create a free account and join the community.",
       "button": "Join Now"
     }
+  },
+  "login": {
+    "title": "Welcome back",
+    "subtitle": "Sign in to your account",
+    "googleButton": "Continue with Google",
+    "facebookButton": "Continue with Facebook",
+    "or": "or",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot password",
+    "button": "Sign In",
+    "noAccount": "Don't have an account?",
+    "registerLink": "Sign up"
   }
 }

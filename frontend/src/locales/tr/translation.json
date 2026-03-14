@@ -35,5 +35,18 @@
       "subtitle": "Ücretsiz hesap oluştur, topluluğa katıl.",
       "button": "Hemen Katıl"
     }
+  },
+  "login": {
+    "title": "Tekrar hoş geldin",
+    "subtitle": "Hesabına giriş yap",
+    "googleButton": "Google ile devam et",
+    "facebookButton": "Facebook ile devam et",
+    "or": "ya da",
+    "email": "E-posta",
+    "password": "Şifre",
+    "forgotPassword": "Şifremi unuttum",
+    "button": "Giriş Yap",
+    "noAccount": "Hesabın yok mu?",
+    "registerLink": "Kayıt ol"
   }
 }
