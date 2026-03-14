@@ -19,6 +19,8 @@ function Login() {
       id: 1,
       username: "aliekin",
       email: "ali@mail.com",
+      firstName: "Ali",
+      lastName: "Ekin",
     };
 
     login(mockUser); // AuthContext'e kullanıcıyı kaydet

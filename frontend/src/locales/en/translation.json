@@ -63,5 +63,23 @@
     "button": "Sign Up",
     "hasAccount": "Already have an account?",
     "loginLink": "Sign in"
+  },
+  "feed": {
+    "placeholder": "Share something...",
+    "book": "Book",
+    "quote": "Quote",
+    "following": "Following",
+    "explore": "Explore",
+    "postTypes": {
+      "quote": "Quote",
+      "book": "Book",
+      "review": "Review"
+    },
+    "status": {
+      "READING": "started reading",
+      "COMPLETED": "finished reading",
+      "WANT_TO_READ": "added to reading list",
+      "DROPPED": "dropped"
+    }
   }
 }

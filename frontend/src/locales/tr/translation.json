@@ -63,5 +63,23 @@
     "button": "Kayıt Ol",
     "hasAccount": "Zaten hesabın var mı?",
     "loginLink": "Giriş yap"
+  },
+  "feed": {
+    "placeholder": "Bir şeyler paylaş...",
+    "book": "Kitap",
+    "quote": "Alıntı",
+    "following": "Takip Ettiklerim",
+    "explore": "Keşfet",
+    "postTypes": {
+      "quote": "Alıntı",
+      "book": "Kitap",
+      "review": "İnceleme"
+    },
+    "status": {
+      "READING": "okumaya başladı",
+      "COMPLETED": "okudu",
+      "WANT_TO_READ": "okuma listesine ekledi",
+      "DROPPED": "yarıda bıraktı"
+    }
   }
 }
