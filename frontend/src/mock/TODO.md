@@ -29,3 +29,17 @@
 - [ ] Ayarlar sayfası
 - [ ] Bildirim sistemi (WebSocket - STOMP)
 - [ ] Post oluşturma modal'ı
+
+## Kitap Durumları
+
+- READING → Şu an okuyorum
+- COMPLETED → Okudum
+- WANT_TO_READ → Okumak istiyorum
+- DROPPED → Yarıda bıraktım
+
+## WebSocket (Backend hazır olunca)
+
+- [ ] STOMP client kurulumu (sockjs-client + @stomp/stompjs)
+- [ ] Bağlantıyı AuthContext'te aç/kapat
+- [ ] Like/Comment anlık güncelleme
+- [ ] Bildirim sistemi
