@@ -81,5 +81,34 @@
       "WANT_TO_READ": "added to reading list",
       "DROPPED": "dropped"
     }
+  },
+  "profile": {
+    "editButton": "Edit Profile",
+    "followButton": "Follow",
+    "unfollowButton": "Unfollow",
+    "stats": {
+      "books": "Books",
+      "quotes": "Quotes",
+      "reviews": "Reviews",
+      "followers": "Followers",
+      "following": "Following"
+    },
+    "currentlyReading": "Currently reading",
+    "tabs": {
+      "posts": "Posts",
+      "library": "Library"
+    },
+    "postFilters": {
+      "all": "All",
+      "quotes": "Quotes",
+      "reviews": "Reviews"
+    },
+    "libraryFilters": {
+      "all": "All",
+      "reading": "Reading",
+      "completed": "Completed",
+      "wantToRead": "Want to Read",
+      "dropped": "Dropped"
+    }
   }
 }

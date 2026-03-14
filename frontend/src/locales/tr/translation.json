@@ -81,5 +81,34 @@
       "WANT_TO_READ": "okuma listesine ekledi",
       "DROPPED": "yarıda bıraktı"
     }
+  },
+  "profile": {
+    "editButton": "Profili Düzenle",
+    "followButton": "Takip Et",
+    "unfollowButton": "Takibi Bırak",
+    "stats": {
+      "books": "Kitap",
+      "quotes": "Alıntı",
+      "reviews": "İnceleme",
+      "followers": "Takipçi",
+      "following": "Takip"
+    },
+    "currentlyReading": "Şu an okuyorum",
+    "tabs": {
+      "posts": "Paylaşımlar",
+      "library": "Kitaplık"
+    },
+    "postFilters": {
+      "all": "Tümü",
+      "quotes": "Alıntılar",
+      "reviews": "İncelemeler"
+    },
+    "libraryFilters": {
+      "all": "Tümü",
+      "reading": "Okuyorum",
+      "completed": "Okudum",
+      "wantToRead": "Okuyacağım",
+      "dropped": "Yarım Bıraktım"
+    }
   }
 }

@@ -1,5 +1,62 @@
-export default Profile;
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import {
+  mockProfile,
+  mockCurrentlyReading,
+  mockLibrary,
+  mockProfilePosts,
+} from "../mock/profileData";
+import ProfileHeader from "../components/profile/ProfileHeader";
+import CurrentlyReading from "../components/profile/CurrentlyReading";
+import ProfileTabs from "../components/profile/ProfileTabs";
+import ProfilePosts from "../components/profile/ProfilePosts";
+import ProfileLibrary from "../components/profile/ProfileLibrary";
 
 function Profile() {
-  return <div>Profile Page</div>;
+  const { username } = useParams();
+  const [activeTab, setActiveTab] = useState("posts");
+  const [activeFilter, setActiveFilter] = useState("all");
+
+  const profile = mockProfile;
+
+  const handleStatClick = (stat) => {
+    switch (stat) {
+      case "quotes":
+        setActiveTab("posts");
+        setActiveFilter("quotes");
+        break;
+      case "reviews":
+        setActiveTab("posts");
+        setActiveFilter("reviews");
+        break;
+      case "books":
+        setActiveTab("library");
+        setActiveFilter("all");
+        break;
+      default:
+        break;
+    }
+  };
+
+  return (
+    <div className="max-w-3xl mx-auto py-6">
+      <ProfileHeader
+        profile={profile}
+        onEditClick={() => console.log("edit")}
+        onStatClick={handleStatClick}
+      />
+      <CurrentlyReading books={mockCurrentlyReading} />
+      <ProfileTabs activeTab={activeTab} onTabChange={setActiveTab} />
+      {activeTab === "posts" && (
+        <ProfilePosts
+          posts={mockProfilePosts}
+          activeFilter={activeFilter}
+          onFilterChange={setActiveFilter}
+        />
+      )}
+      {activeTab === "library" && <ProfileLibrary books={mockLibrary} />}
+    </div>
+  );
 }
+
+export default Profile;
