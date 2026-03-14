@@ -31,7 +31,7 @@ function Navbar() {
 
           <Link
             to="/login"
-            className="w-24 text-center text-gray-600 hover:text-blue-600 font-medium"
+            className="w-28 text-center text-gray-600 hover:text-blue-600 font-medium"
           >
             {t("navbar.login")}
           </Link>
