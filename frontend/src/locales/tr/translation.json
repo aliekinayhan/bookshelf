@@ -110,5 +110,36 @@
       "wantToRead": "Okuyacağım",
       "dropped": "Yarım Bıraktım"
     }
+  },
+  "book": {
+    "likes": "beğeni",
+    "publishYear": "Yayın Yılı",
+    "pages": "Sayfa",
+    "readers": "Okur",
+    "reviews": "İnceleme",
+    "addToLibrary": "Kitaplığıma Ekle",
+    "removeFromLibrary": "Kitaplıktan Çıkar",
+    "addQuote": "Alıntı Ekle",
+    "writeReview": "İnceleme Yaz",
+    "about": "Hakkında",
+    "yourRating": "Puanın",
+    "seriesOrder": "Kitap",
+    "tabs": {
+      "reviews": "İncelemeler",
+      "quotes": "Alıntılar",
+      "editions": "Diğer Baskılar"
+    },
+    "status": {
+      "reading": "Okuyorum",
+      "completed": "Okudum",
+      "wantToRead": "Okuyacağım",
+      "dropped": "Yarım Bıraktım"
+    },
+    "editions": {
+      "publisher": "Yayınevi",
+      "year": "Yıl",
+      "language": "Dil",
+      "isbn": "ISBN"
+    }
   }
 }

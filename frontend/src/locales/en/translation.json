@@ -110,5 +110,36 @@
       "wantToRead": "Want to Read",
       "dropped": "Dropped"
     }
+  },
+  "book": {
+    "likes": "likes",
+    "publishYear": "Published",
+    "pages": "Pages",
+    "readers": "Readers",
+    "reviews": "Reviews",
+    "addToLibrary": "Add to Library",
+    "removeFromLibrary": "Remove from Library",
+    "addQuote": "Add Quote",
+    "writeReview": "Write Review",
+    "yourRating": "Your rating",
+    "seriesOrder": "Book",
+    "about": "About",
+    "tabs": {
+      "reviews": "Reviews",
+      "quotes": "Quotes",
+      "editions": "Other Editions"
+    },
+    "status": {
+      "reading": "Reading",
+      "completed": "Completed",
+      "wantToRead": "Want to Read",
+      "dropped": "Dropped"
+    },
+    "editions": {
+      "publisher": "Publisher",
+      "year": "Year",
+      "language": "Language",
+      "isbn": "ISBN"
+    }
   }
 }
