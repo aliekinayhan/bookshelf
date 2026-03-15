@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
-  mockBook,
-  mockBookReviews,
-  mockBookQuotes,
-  mockBookEditions,
-} from "../mock/bookData";
+  getBook,
+  getBookReviews,
+  getBookQuotes,
+  getBookEditions,
+} from "../services/bookService";
 import BookHeader from "../components/book/BookHeader";
 import BookAbout from "../components/book/BookAbout";
 import BookReviews from "../components/book/BookReviews";
@@ -17,9 +17,20 @@ function BookDetail() {
   const { id } = useParams();
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState("reviews");
+  const [book, setBook] = useState(null);
+  const [reviews, setReviews] = useState([]);
+  const [quotes, setQuotes] = useState([]);
+  const [editions, setEditions] = useState([]);
 
-  // TODO: Backend hazır olunca id ile API'den çekilecek
-  const book = mockBook;
+  useEffect(() => {
+    getBook(id).then(setBook);
+    getBookReviews(id).then(setReviews);
+    getBookQuotes(id).then(setQuotes);
+    getBookEditions(id).then(setEditions);
+  }, [id]);
+
+  if (!book)
+    return <div className="text-center py-20 text-gray-400">Yükleniyor...</div>;
 
   const tabs = [
     { key: "reviews", label: t("book.tabs.reviews") },
@@ -29,13 +40,10 @@ function BookDetail() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
-      {/* Kitap başlığı */}
       <BookHeader book={book} onTabChange={setActiveTab} />
 
-      {/* Açıklama */}
       <BookAbout description={book.description} />
 
-      {/* Sekmeler */}
       <div className="flex border-b border-gray-200 mb-6">
         {tabs.map((tab) => (
           <button
@@ -52,10 +60,9 @@ function BookDetail() {
         ))}
       </div>
 
-      {/* Sekme içerikleri */}
-      {activeTab === "reviews" && <BookReviews reviews={mockBookReviews} />}
-      {activeTab === "quotes" && <BookQuotes quotes={mockBookQuotes} />}
-      {activeTab === "editions" && <BookEditions editions={mockBookEditions} />}
+      {activeTab === "reviews" && <BookReviews reviews={reviews} />}
+      {activeTab === "quotes" && <BookQuotes quotes={quotes} />}
+      {activeTab === "editions" && <BookEditions editions={editions} />}
     </div>
   );
 }

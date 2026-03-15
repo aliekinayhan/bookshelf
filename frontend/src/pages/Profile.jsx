@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import {
-  mockProfile,
-  mockCurrentlyReading,
-  mockLibrary,
-  mockProfilePosts,
-} from "../mock/profileData";
+  getProfile,
+  getCurrentlyReading,
+  getUserLibrary,
+  getUserPosts,
+} from "../services/userService";
 import ProfileHeader from "../components/profile/ProfileHeader";
 import CurrentlyReading from "../components/profile/CurrentlyReading";
 import ProfileTabs from "../components/profile/ProfileTabs";
@@ -16,14 +16,22 @@ function Profile() {
   const { username } = useParams();
   const [activeTab, setActiveTab] = useState("posts");
   const [activeFilter, setActiveFilter] = useState("all");
+  const [profile, setProfile] = useState(null);
+  const [currentlyReading, setCurrentlyReading] = useState([]);
+  const [library, setLibrary] = useState([]);
+  const [posts, setPosts] = useState([]);
 
-  // TODO: Backend hazır olunca username ile API'den çekilecek
-  const profile = mockProfile;
+  useEffect(() => {
+    getProfile(username).then(setProfile);
+    getCurrentlyReading(username).then(setCurrentlyReading);
+    getUserLibrary(username).then(setLibrary);
+    getUserPosts(username).then(setPosts);
+  }, [username]);
 
-  // Sadece COMPLETED kitapları say — profil istatistiğinde sadece bitirilmiş kitaplar
-  const completedBooks = mockLibrary.filter(
-    (b) => b.status === "COMPLETED",
-  ).length;
+  if (!profile)
+    return <div className="text-center py-20 text-gray-400">Yükleniyor...</div>;
+
+  const completedBooks = library.filter((b) => b.status === "COMPLETED").length;
 
   const handleStatClick = (stat) => {
     switch (stat) {
@@ -54,20 +62,16 @@ function Profile() {
         onEditClick={() => console.log("edit")}
         onStatClick={handleStatClick}
       />
-
-      <CurrentlyReading books={mockCurrentlyReading} />
-
+      <CurrentlyReading books={currentlyReading} />
       <ProfileTabs activeTab={activeTab} onTabChange={setActiveTab} />
-
       {activeTab === "posts" && (
         <ProfilePosts
-          posts={mockProfilePosts}
+          posts={posts}
           activeFilter={activeFilter}
           onFilterChange={setActiveFilter}
         />
       )}
-
-      {activeTab === "library" && <ProfileLibrary books={mockLibrary} />}
+      {activeTab === "library" && <ProfileLibrary books={library} />}
     </div>
   );
 }

@@ -1,7 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useTranslation } from "react-i18next";
-import { mockPosts } from "../mock/feedData";
+import {
+  getFollowingFeed,
+  getExploreFeed,
+  getAuthorsFeed,
+  deletePost,
+} from "../services/feedService";
 import QuotePost from "../components/feed/QuotePost";
 import BookPost from "../components/feed/BookPost";
 import ReviewPost from "../components/feed/ReviewPost";
@@ -12,16 +17,22 @@ function Feed() {
   const { user } = useAuth();
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState(user ? "following" : "explore");
-  const [posts, setPosts] = useState(mockPosts);
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    if (activeTab === "following") getFollowingFeed().then(setPosts);
+    else if (activeTab === "authors") getAuthorsFeed().then(setPosts);
+    else getExploreFeed().then(setPosts);
+  }, [activeTab]);
 
   const handleEditPost = (postId) => {
     console.log("Edit post:", postId);
     // TODO: Post düzenleme modal'ı açılacak
   };
 
-  const handleDeletePost = (postId) => {
+  const handleDeletePost = async (postId) => {
+    await deletePost(postId);
     setPosts((prev) => prev.filter((post) => post.id !== postId));
-    // TODO: Backend'e DELETE isteği
   };
 
   const renderPost = (post) => {
@@ -60,7 +71,6 @@ function Feed() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-6">
-      {/* Paylaş alanı — sadece giriş yapılmışsa */}
       {user && (
         <div className="bg-white border border-gray-200 rounded-xl p-4 mb-6 flex items-center gap-3">
           <div className="w-9 h-9 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm font-medium flex-shrink-0">
@@ -82,7 +92,6 @@ function Feed() {
         </div>
       )}
 
-      {/* Sekmeler */}
       <div className="flex border-b border-gray-200 mb-6">
         {user && (
           <button
@@ -120,7 +129,6 @@ function Feed() {
         </button>
       </div>
 
-      {/* Postlar */}
       <div>{posts.map((post) => renderPost(post))}</div>
     </div>
   );
