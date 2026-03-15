@@ -70,6 +70,7 @@
     "quote": "Quote",
     "following": "Following",
     "explore": "Explore",
+    "authors": "Authors",
     "postTypes": {
       "quote": "Quote",
       "book": "Book",
@@ -141,5 +142,10 @@
       "language": "Language",
       "isbn": "ISBN"
     }
+  },
+  "post": {
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleteConfirm": "Are you sure you want to delete this post?"
   }
 }

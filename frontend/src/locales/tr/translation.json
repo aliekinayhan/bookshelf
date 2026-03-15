@@ -70,6 +70,7 @@
     "quote": "Alıntı",
     "following": "Takip Ettiklerim",
     "explore": "Keşfet",
+    "authors": "Yazarlar",
     "postTypes": {
       "quote": "Alıntı",
       "book": "Kitap",
@@ -141,5 +142,10 @@
       "language": "Dil",
       "isbn": "ISBN"
     }
+  },
+  "post": {
+    "edit": "Düzenle",
+    "delete": "Sil",
+    "deleteConfirm": "Bu paylaşımı silmek istediğine emin misin?"
   }
 }

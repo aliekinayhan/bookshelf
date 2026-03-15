@@ -12,15 +12,47 @@ function Feed() {
   const { user } = useAuth();
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState(user ? "following" : "explore");
+  const [posts, setPosts] = useState(mockPosts);
+
+  const handleEditPost = (postId) => {
+    console.log("Edit post:", postId);
+    // TODO: Post düzenleme modal'ı açılacak
+  };
+
+  const handleDeletePost = (postId) => {
+    setPosts((prev) => prev.filter((post) => post.id !== postId));
+    // TODO: Backend'e DELETE isteği
+  };
 
   const renderPost = (post) => {
     switch (post.type) {
       case "quote":
-        return <QuotePost key={post.id} post={post} />;
+        return (
+          <QuotePost
+            key={post.id}
+            post={post}
+            onEdit={handleEditPost}
+            onDelete={handleDeletePost}
+          />
+        );
       case "book":
-        return <BookPost key={post.id} post={post} />;
+        return (
+          <BookPost
+            key={post.id}
+            post={post}
+            onEdit={handleEditPost}
+            onDelete={handleDeletePost}
+          />
+        );
       case "review":
-        return <ReviewPost key={post.id} post={post} />;
+        return (
+          <ReviewPost
+            key={post.id}
+            post={post}
+            onEdit={handleEditPost}
+            onDelete={handleDeletePost}
+          />
+        );
       default:
         return null;
     }
@@ -28,6 +60,7 @@ function Feed() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-6">
+      {/* Paylaş alanı — sadece giriş yapılmışsa */}
       {user && (
         <div className="bg-white border border-gray-200 rounded-xl p-4 mb-6 flex items-center gap-3">
           <div className="w-9 h-9 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm font-medium flex-shrink-0">
@@ -49,6 +82,7 @@ function Feed() {
         </div>
       )}
 
+      {/* Sekmeler */}
       <div className="flex border-b border-gray-200 mb-6">
         {user && (
           <button
@@ -60,6 +94,18 @@ function Feed() {
             }`}
           >
             {t("feed.following")}
+          </button>
+        )}
+        {user && (
+          <button
+            onClick={() => setActiveTab("authors")}
+            className={`px-5 py-2.5 text-sm font-medium border-b-2 transition-colors ${
+              activeTab === "authors"
+                ? "border-blue-600 text-blue-600"
+                : "border-transparent text-gray-500 hover:text-gray-700"
+            }`}
+          >
+            {t("feed.authors")}
           </button>
         )}
         <button
@@ -74,7 +120,8 @@ function Feed() {
         </button>
       </div>
 
-      <div>{mockPosts.map((post) => renderPost(post))}</div>
+      {/* Postlar */}
+      <div>{posts.map((post) => renderPost(post))}</div>
     </div>
   );
 }
