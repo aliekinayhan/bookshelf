@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
+import { ThemeProvider } from "./context/ThemeContext";
 import MainLayout from "./components/layout/MainLayout";
 import Landing from "./pages/Landing";
 import Feed from "./pages/Feed";

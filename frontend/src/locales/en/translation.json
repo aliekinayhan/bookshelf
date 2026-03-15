@@ -177,5 +177,64 @@
     "empty": "No results found",
     "searching": "Searching...",
     "placeholder_empty": "Search for a book, author or user"
+  },
+  "settings": {
+    "title": "Settings",
+    "sections": {
+      "profile": "Profile",
+      "account": "Account",
+      "connected": "Connected Accounts",
+      "preferences": "Preferences",
+      "privacy": "Privacy",
+      "danger": "Danger Zone"
+    },
+    "profile": {
+      "photo": "Profile Photo",
+      "photoDesc": "JPG or PNG, max 5MB",
+      "cover": "Cover Photo",
+      "coverDesc": "JPG or PNG, max 10MB",
+      "change": "Change",
+      "fullName": "Full Name",
+      "username": "Username",
+      "bio": "Bio"
+    },
+    "account": {
+      "email": "Email",
+      "password": "Password",
+      "passwordDesc": "Last changed: 3 months ago",
+      "change": "Change"
+    },
+    "connected": {
+      "connected": "Connected",
+      "notConnected": "Not connected"
+    },
+    "preferences": {
+      "language": "Language",
+      "languageDesc": "App language",
+      "theme": "Theme",
+      "themeDesc": "Appearance mode",
+      "themeLight": "Light",
+      "themeDark": "Dark",
+      "themeSystem": "System",
+      "notifications": "Notifications",
+      "notificationsDesc": "Like and comment notifications"
+    },
+    "privacy": {
+      "profileVisibility": "Profile Visibility",
+      "profileVisibilityDesc": "Who can see my profile?",
+      "libraryVisibility": "Library Visibility",
+      "libraryVisibilityDesc": "Who can see my library?",
+      "followRequests": "Follow Requests",
+      "followRequestsDesc": "Approve follow requests",
+      "everyone": "Everyone",
+      "followersOnly": "Followers only",
+      "onlyMe": "Only me"
+    },
+    "save": "Save Changes",
+    "danger": {
+      "title": "Delete Account",
+      "desc": "All data will be permanently deleted",
+      "button": "Delete Account"
+    }
   }
 }

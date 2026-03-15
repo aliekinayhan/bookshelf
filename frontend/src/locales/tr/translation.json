@@ -177,5 +177,64 @@
     "empty": "Sonuç bulunamadı",
     "searching": "Aranıyor...",
     "placeholder_empty": "Aramak istediğin kitabı, yazarı veya kullanıcıyı yaz"
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "sections": {
+      "profile": "Profil",
+      "account": "Hesap",
+      "connected": "Bağlı Hesaplar",
+      "preferences": "Tercihler",
+      "privacy": "Gizlilik",
+      "danger": "Tehlikeli Bölge"
+    },
+    "profile": {
+      "photo": "Profil Fotoğrafı",
+      "photoDesc": "JPG veya PNG, max 5MB",
+      "cover": "Kapak Fotoğrafı",
+      "coverDesc": "JPG veya PNG, max 10MB",
+      "change": "Değiştir",
+      "fullName": "Ad Soyad",
+      "username": "Kullanıcı Adı",
+      "bio": "Biyografi"
+    },
+    "account": {
+      "email": "E-posta",
+      "password": "Şifre",
+      "passwordDesc": "Son değiştirilme: 3 ay önce",
+      "change": "Değiştir"
+    },
+    "connected": {
+      "connected": "Bağlı",
+      "notConnected": "Bağlı değil"
+    },
+    "preferences": {
+      "language": "Dil",
+      "languageDesc": "Uygulama dili",
+      "theme": "Tema",
+      "themeDesc": "Görünüm modu",
+      "themeLight": "Açık",
+      "themeDark": "Koyu",
+      "themeSystem": "Sistem",
+      "notifications": "Bildirimler",
+      "notificationsDesc": "Beğeni ve yorum bildirimleri"
+    },
+    "privacy": {
+      "profileVisibility": "Profil Görünürlüğü",
+      "profileVisibilityDesc": "Profilim kimler tarafından görülebilir?",
+      "libraryVisibility": "Kitaplık Görünürlüğü",
+      "libraryVisibilityDesc": "Kitaplığım kimler tarafından görülebilir?",
+      "followRequests": "Takip İstekleri",
+      "followRequestsDesc": "Takip isteklerini onayla",
+      "everyone": "Herkes",
+      "followersOnly": "Sadece takipçiler",
+      "onlyMe": "Sadece ben"
+    },
+    "save": "Değişiklikleri Kaydet",
+    "danger": {
+      "title": "Hesabı Sil",
+      "desc": "Tüm veriler kalıcı olarak silinir",
+      "button": "Hesabı Sil"
+    }
   }
 }
