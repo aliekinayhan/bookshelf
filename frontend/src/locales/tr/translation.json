@@ -147,5 +147,19 @@
     "edit": "Düzenle",
     "delete": "Sil",
     "deleteConfirm": "Bu paylaşımı silmek istediğine emin misin?"
+  },
+  "author": {
+    "books": "Kitap",
+    "readers": "Okur",
+    "likes": "Beğeni",
+    "avgRating": "Ort. Puan",
+    "follow": "Takip Et",
+    "unfollow": "Takibi Bırak",
+    "about": "Hakkında",
+    "noSeries": "Bu yazara ait seri bulunamadı.",
+    "tabs": {
+      "books": "Kitapları",
+      "series": "Seriler"
+    }
   }
 }

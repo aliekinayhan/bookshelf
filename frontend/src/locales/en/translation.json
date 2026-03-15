@@ -147,5 +147,19 @@
     "edit": "Edit",
     "delete": "Delete",
     "deleteConfirm": "Are you sure you want to delete this post?"
+  },
+  "author": {
+    "books": "Books",
+    "readers": "Readers",
+    "likes": "Likes",
+    "avgRating": "Avg. Rating",
+    "follow": "Follow",
+    "unfollow": "Unfollow",
+    "about": "About",
+    "noSeries": "No series found for this author.",
+    "tabs": {
+      "books": "Books",
+      "series": "Series"
+    }
   }
 }
