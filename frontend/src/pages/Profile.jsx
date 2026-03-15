@@ -17,7 +17,13 @@ function Profile() {
   const [activeTab, setActiveTab] = useState("posts");
   const [activeFilter, setActiveFilter] = useState("all");
 
+  // TODO: Backend hazır olunca username ile API'den çekilecek
   const profile = mockProfile;
+
+  // Sadece COMPLETED kitapları say — profil istatistiğinde sadece bitirilmiş kitaplar
+  const completedBooks = mockLibrary.filter(
+    (b) => b.status === "COMPLETED",
+  ).length;
 
   const handleStatClick = (stat) => {
     switch (stat) {
@@ -41,12 +47,18 @@ function Profile() {
   return (
     <div className="max-w-3xl mx-auto py-6">
       <ProfileHeader
-        profile={profile}
+        profile={{
+          ...profile,
+          stats: { ...profile.stats, books: completedBooks },
+        }}
         onEditClick={() => console.log("edit")}
         onStatClick={handleStatClick}
       />
+
       <CurrentlyReading books={mockCurrentlyReading} />
+
       <ProfileTabs activeTab={activeTab} onTabChange={setActiveTab} />
+
       {activeTab === "posts" && (
         <ProfilePosts
           posts={mockProfilePosts}
@@ -54,6 +66,7 @@ function Profile() {
           onFilterChange={setActiveFilter}
         />
       )}
+
       {activeTab === "library" && <ProfileLibrary books={mockLibrary} />}
     </div>
   );

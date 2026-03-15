@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 function CurrentlyReading({ books }) {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   if (!books.length) return null;
 
@@ -14,7 +16,8 @@ function CurrentlyReading({ books }) {
         {books.map((book) => (
           <div
             key={book.id}
-            className="flex gap-3 bg-gray-50 rounded-xl p-3 flex-1 min-w-48 max-w-56"
+            onClick={() => navigate(`/book/${book.isbn}`)}
+            className="flex gap-3 bg-gray-50 rounded-xl p-3 flex-1 min-w-48 max-w-56 cursor-pointer hover:bg-gray-100 transition-colors"
           >
             {book.coverUrl ? (
               <img

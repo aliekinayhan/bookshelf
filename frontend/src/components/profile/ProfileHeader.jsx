@@ -9,8 +9,11 @@ function ProfileHeader({ profile, onEditClick, onStatClick }) {
 
   return (
     <div>
+      {/* Kapak fotoğrafı */}
       <div className="h-44 bg-blue-200 rounded-xl" />
+
       <div className="px-6">
+        {/* Avatar + Buton */}
         <div className="flex justify-between items-end -mt-10 mb-4">
           <div className="w-20 h-20 rounded-full bg-blue-600 border-4 border-white flex items-center justify-center text-white text-2xl font-bold">
             {profile.avatarUrl ? (
@@ -23,6 +26,7 @@ function ProfileHeader({ profile, onEditClick, onStatClick }) {
               getInitials(profile.firstName, profile.lastName)
             )}
           </div>
+
           {isOwnProfile ? (
             <button
               onClick={onEditClick}
@@ -37,6 +41,7 @@ function ProfileHeader({ profile, onEditClick, onStatClick }) {
           )}
         </div>
 
+        {/* İsim ve kullanıcı adı */}
         <div className="mb-3">
           <h1 className="text-xl font-bold">
             {profile.firstName} {profile.lastName}
@@ -44,12 +49,14 @@ function ProfileHeader({ profile, onEditClick, onStatClick }) {
           <p className="text-gray-500 text-sm">@{profile.username}</p>
         </div>
 
+        {/* Biyografi */}
         {profile.bio && (
           <p className="text-sm text-gray-600 leading-relaxed mb-4">
             {profile.bio}
           </p>
         )}
 
+        {/* İstatistikler */}
         <div className="flex gap-6">
           <div
             className="text-center cursor-pointer hover:text-blue-600"
@@ -60,6 +67,7 @@ function ProfileHeader({ profile, onEditClick, onStatClick }) {
               {t("profile.stats.books")}
             </div>
           </div>
+
           <div
             className="text-center cursor-pointer hover:text-blue-600"
             onClick={() => onStatClick("quotes")}
@@ -69,6 +77,7 @@ function ProfileHeader({ profile, onEditClick, onStatClick }) {
               {t("profile.stats.quotes")}
             </div>
           </div>
+
           <div
             className="text-center cursor-pointer hover:text-blue-600"
             onClick={() => onStatClick("reviews")}
@@ -78,12 +87,14 @@ function ProfileHeader({ profile, onEditClick, onStatClick }) {
               {t("profile.stats.reviews")}
             </div>
           </div>
+
           <div className="text-center cursor-pointer border-b border-dashed border-gray-300">
             <div className="font-bold">{profile.stats.followers}</div>
             <div className="text-xs text-gray-500">
               {t("profile.stats.followers")}
             </div>
           </div>
+
           <div className="text-center cursor-pointer border-b border-dashed border-gray-300">
             <div className="font-bold">{profile.stats.following}</div>
             <div className="text-xs text-gray-500">
