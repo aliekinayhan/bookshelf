@@ -10,8 +10,3 @@ function MainLayout({ children }) {
 }
 
 export default MainLayout;
-{
-  /*
-Children = contents inside a component
-*/
-}

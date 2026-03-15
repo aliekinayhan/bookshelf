@@ -2,7 +2,8 @@
   "navbar": {
     "login": "Login",
     "register": "Register",
-    "logout": "Logout"
+    "logout": "Logout",
+    "search": "Search books, authors or users..."
   },
   "landing": {
     "badge": "Social platform for book lovers",
@@ -161,5 +162,20 @@
       "books": "Books",
       "series": "Series"
     }
+  },
+  "search": {
+    "placeholder": "Search books, authors or users...",
+    "tabs": {
+      "books": "Books",
+      "authors": "Authors",
+      "users": "Users"
+    },
+    "badges": {
+      "author": "Author",
+      "user": "User"
+    },
+    "empty": "No results found",
+    "searching": "Searching...",
+    "placeholder_empty": "Search for a book, author or user"
   }
 }

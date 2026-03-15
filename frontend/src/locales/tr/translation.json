@@ -2,7 +2,8 @@
   "navbar": {
     "login": "Giriş Yap",
     "register": "Kayıt Ol",
-    "logout": "Çıkış Yap"
+    "logout": "Çıkış Yap",
+    "search": "Kitap, yazar veya kullanıcı ara..."
   },
   "landing": {
     "badge": "Kitap severler için sosyal platform",
@@ -161,5 +162,20 @@
       "books": "Kitapları",
       "series": "Seriler"
     }
+  },
+  "search": {
+    "placeholder": "Kitap, yazar veya kullanıcı ara...",
+    "tabs": {
+      "books": "Kitaplar",
+      "authors": "Yazarlar",
+      "users": "Kullanıcılar"
+    },
+    "badges": {
+      "author": "Yazar",
+      "user": "Kullanıcı"
+    },
+    "empty": "Sonuç bulunamadı",
+    "searching": "Aranıyor...",
+    "placeholder_empty": "Aramak istediğin kitabı, yazarı veya kullanıcıyı yaz"
   }
 }
